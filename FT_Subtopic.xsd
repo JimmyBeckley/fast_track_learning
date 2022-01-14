@@ -31,6 +31,11 @@
           <xsd:appinfo source="appian.jpa">@Column(name="FT_VIDEO_ID", columnDefinition="INT", nullable=false) @OneToOne(cascade=CascadeType.ALL) @JoinColumn(name="FT_VIDEO_ID")</xsd:appinfo>
         </xsd:annotation>
       </xsd:element>
+      <xsd:element name="FT_LessonID" nillable="true" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="FT_LESSON_ID", nullable=false, columnDefinition="INT") @JoinColumn(name="FT_LESSON_ID")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
       <xsd:element name="UpdatedBy" type="xsd:string">
         <xsd:annotation>
           <xsd:appinfo source="appian.jpa">@Column(name="UPDATED_BY", columnDefinition="VARCHAR(155)", nullable=false)</xsd:appinfo>
