@@ -1,0 +1,51 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n1="urn:com:fast_track_faith:types" xmlns:tns="urn:com:appian:types:FT" xmlns:types2="urn:com:fast_track_faith:types" targetNamespace="urn:com:appian:types:FT">
+  <xsd:import namespace="urn:com:fast_track_faith:types" schemaLocation="%7Burn%3Acom%3Afast_track_faith%3Atypes%7DFT_Video.xsd" />
+  <xsd:complexType name="FT_Subtopic">
+    <xsd:annotation>
+      <xsd:appinfo source="appian.jpa">@Table(name="FT_SUBTOPIC")</xsd:appinfo>
+      <xsd:documentation><![CDATA[Base data structure for a single Subtopic record]]></xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ID" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Id @GeneratedValue @Column(name="ID", columnDefinition="INT", nullable=false, unique=true)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Title" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="TITLE", columnDefinition="VARCHAR(155)", nullable=false)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Text" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="TEXT", columnDefinition="VARCHAR(900)", nullable=false)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Icon" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="ICON", columnDefinition="INT", nullable=false)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element form="unqualified" name="FT_VideoID" nillable="true" type="n1:FT_Video">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="FT_VIDEO_ID", columnDefinition="INT", nullable=false) @OneToOne(cascade=CascadeType.ALL) @JoinColumn(name="FT_VIDEO_ID")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="UpdatedBy" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="UPDATED_BY", columnDefinition="VARCHAR(155)", nullable=false)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="UpdatedOn" type="xsd:dateTime">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="UPDATED_ON", columnDefinition="DATETIME", nullable=false)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="IsActive" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="IS_ACTIVE", columnDefinition="BIT", nullable=false)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
