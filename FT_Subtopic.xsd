@@ -23,7 +23,7 @@
       </xsd:element>
       <xsd:element name="Icon" type="xsd:int">
         <xsd:annotation>
-          <xsd:appinfo source="appian.jpa">@Column(name="ICON", columnDefinition="INT", nullable=false)</xsd:appinfo>
+          <xsd:appinfo source="appian.jpa">@Column(name="ICON", columnDefinition="INT", nullable=true)</xsd:appinfo>
         </xsd:annotation>
       </xsd:element>
       <xsd:element form="unqualified" name="FT_VideoID" nillable="true" type="n1:FT_Video">
