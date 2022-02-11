@@ -15,6 +15,11 @@
           <xsd:appinfo source="appian.jpa">@Column(name="DAILY_SEQUENCE", columnDefinition="INT", nullable=false)</xsd:appinfo>
         </xsd:annotation>
       </xsd:element>
+      <xsd:element name="Ordering" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="ORDERING", columnDefinition="INT")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
       <xsd:element name="Title" type="xsd:string">
         <xsd:annotation>
           <xsd:appinfo source="appian.jpa">@Column(name="TITLE", columnDefinition="VARCHAR(255)", nullable=false)</xsd:appinfo>
