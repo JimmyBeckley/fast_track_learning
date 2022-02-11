@@ -1,0 +1,70 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:com:fast_track" targetNamespace="urn:com:fast_track">
+  <xsd:complexType name="FT_Lesson">
+    <xsd:annotation>
+      <xsd:appinfo source="appian.jpa">@Table(name="FT_LESSON")</xsd:appinfo>
+      <xsd:documentation><![CDATA[Base data structure for a single Lesson record]]></xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ID" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Id @GeneratedValue @Column(name="ID", columnDefinition="INT", nullable=false, unique=true)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DailySequence" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="DAILY_SEQUENCE", columnDefinition="INT", nullable=false)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Title" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="TITLE", columnDefinition="VARCHAR(255)", nullable=false)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Objective" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="OBJECTIVE", columnDefinition="VARCHAR(255)", nullable=false)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ObjectiveDetails" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="OBJECTIVE_DETAILS", columnDefinition="VARCHAR(555)", nullable=false)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Topic" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="TOPIC", columnDefinition="VARCHAR(40)", nullable=false)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Concept" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="CONCEPT", columnDefinition="VARCHAR(900)", nullable=false)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Activity" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="ACTIVITY", columnDefinition="VARCHAR(40)", nullable=false)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ActivityInstructions" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="ACTIVITY_INSTRUCTIONS", columnDefinition="VARCHAR(555)", nullable=false)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Hope" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="PRAYER", columnDefinition="VARCHAR(555)", nullable=false)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="UpdatedOn" nillable="true" type="xsd:dateTime">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="UPDATED_ON", columnDefinition="DATETIME")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="UpdatedBy" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="UPDATED_BY", columnDefinition="VARCHAR(255)")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
