@@ -37,7 +37,7 @@
       </xsd:element>
       <xsd:element name="Topic" type="xsd:string">
         <xsd:annotation>
-          <xsd:appinfo source="appian.jpa">@Column(name="TOPIC", columnDefinition="VARCHAR(40)", nullable=false)</xsd:appinfo>
+          <xsd:appinfo source="appian.jpa">@Column(name="TOPIC", columnDefinition="VARCHAR(55)", nullable=false)</xsd:appinfo>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="Concept" type="xsd:string">
@@ -47,7 +47,7 @@
       </xsd:element>
       <xsd:element name="Activity" type="xsd:string">
         <xsd:annotation>
-          <xsd:appinfo source="appian.jpa">@Column(name="ACTIVITY", columnDefinition="VARCHAR(40)", nullable=false)</xsd:appinfo>
+          <xsd:appinfo source="appian.jpa">@Column(name="ACTIVITY", columnDefinition="VARCHAR(55)", nullable=false)</xsd:appinfo>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="ActivityInstructions" type="xsd:string">
