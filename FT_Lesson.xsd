@@ -10,9 +10,9 @@
           <xsd:appinfo source="appian.jpa">@Id @GeneratedValue @Column(name="ID", columnDefinition="INT", nullable=false, unique=true)</xsd:appinfo>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element name="DailySequence" type="xsd:int">
+      <xsd:element name="ModuleID" type="xsd:int">
         <xsd:annotation>
-          <xsd:appinfo source="appian.jpa">@Column(name="DAILY_SEQUENCE", columnDefinition="INT", nullable=false)</xsd:appinfo>
+          <xsd:appinfo source="appian.jpa">@Column(name="MODULE_ID", columnDefinition="INT", nullable=false)</xsd:appinfo>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="Ordering" type="xsd:int">
